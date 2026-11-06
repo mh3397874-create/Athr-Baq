@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071f1a">
+<title>أثرٌ باقٍ | صدقة جارية</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700;800&display=swap');
+:root{--bg:#061b17;--panel:#0c2b24;--panel2:#10382e;--gold:#d8b56a;--gold2:#f1d99c;--cream:#f6efdc;--muted:#b8c7bd;--line:rgba(216,181,106,.24);--shadow:0 18px 55px rgba(0,0,0,.28)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -10%,#174c3c 0,#071f1a 48%,#041410 100%);color:var(--cream);font-family:'Cairo',Tahoma,sans-serif;line-height:1.9;min-height:100vh}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:repeating-linear-gradient(45deg,transparent 0 23px,var(--gold) 24px,transparent 25px),repeating-linear-gradient(-45deg,transparent 0 23px,var(--gold) 24px,transparent 25px);mask-image:linear-gradient(to bottom,black,transparent 75%);z-index:-1}
+*{scrollbar-color:#916f38 #071b16}
+header{position:sticky;top:0;z-index:10;background:rgba(4,20,16,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{max-width:1120px;margin:auto;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--gold2);font-weight:800;font-size:1.15rem}
+.brand-mark{width:38px;height:38px;border:1px solid var(--gold);border-radius:12px;display:grid;place-items:center;color:var(--gold);font-family:Amiri,serif;font-size:1.5rem}
+nav{display:flex;gap:5px;flex-wrap:wrap}
+nav button{background:transparent;border:1px solid transparent;color:var(--muted);padding:7px 12px;border-radius:30px;font:600 .88rem Cairo;cursor:pointer}
+nav button.active,nav button:hover{border-color:var(--line);color:var(--gold2);background:#d8b56a12}
+main{max-width:1120px;margin:auto;padding:26px 18px 70px}
+.hero{position:relative;overflow:hidden;text-align:center;padding:65px 20px 48px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(135deg,rgba(17,66,51,.95),rgba(5,31,25,.96));box-shadow:var(--shadow)}
+.hero:before,.hero:after{content:"۞";position:absolute;color:#d8b56a20;font:8rem Amiri;top:0}.hero:before{right:16px}.hero:after{left:16px}
+.eyebrow{color:var(--gold);letter-spacing:2px;font-size:.83rem;font-weight:700}
+h1{font:700 clamp(2.7rem,8vw,5rem) Amiri,serif;color:var(--gold2);margin:4px 0 0;line-height:1.3;text-shadow:0 5px 25px #0006}
+.tagline{color:#e5e0ce;font-size:1.05rem;margin:10px auto 24px;max-width:620px}
+.hero-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.btn{border:1px solid var(--gold);background:linear-gradient(135deg,#e3c77e,#b68b43);color:#10251d;border-radius:13px;padding:10px 20px;font:800 .95rem Cairo;cursor:pointer;box-shadow:0 7px 22px #0003;transition:.2s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn.ghost{background:transparent;color:var(--gold2);box-shadow:none}
+.dedication{margin-top:20px;color:var(--muted);font-size:.94rem}
+.dedication strong{color:var(--gold2);display:inline-block;margin:0 4px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}
+.stat,.card{background:linear-gradient(145deg,rgba(16,56,46,.94),rgba(8,35,29,.96));border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}
+.stat{text-align:center;padding:15px 8px}.stat b{display:block;color:var(--gold2);font:700 1.45rem Amiri}.stat span{color:var(--muted);font-size:.83rem}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px}
+.card{padding:22px}.card h2{font:700 1.6rem Amiri;color:var(--gold2);margin:0 0 12px}.card p{color:#e3e6dc;margin:8px 0}
+.section{display:none;animation:fade .35s ease}.section.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.section-title{font:700 2rem Amiri;color:var(--gold2);margin:12px 0 4px}.section-sub{color:var(--muted);margin:0 0 18px}
+.field{width:100%;background:#061d18;color:var(--cream);border:1px solid var(--line);border-radius:12px;padding:11px 13px;font:inherit;outline:none}
+.field:focus{border-color:var(--gold)}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.row .field{flex:1;min-width:170px}
+select.field option{background:#0b2a22}
+.quran-text{font:1.55rem/2.3 Amiri,serif;text-align:justify;color:#f5edda;white-space:pre-wrap;margin-top:16px}
+.ayah{display:inline}
+.audio{width:100%;margin-top:16px;filter:sepia(.3)}
+.adhkar-item{border:1px solid var(--line);border-radius:16px;padding:16px;margin:12px 0;background:#061f19}
+.adhkar-item .arabic{font:1.55rem/2 Amiri;color:#f8efd9}
+.adhkar-item small{color:var(--muted)}
+.count-btn{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:10px}
+.count-btn button{min-width:52px;min-height:48px;border-radius:50%;border:1px solid var(--gold);background:#d8b56a;color:#10251d;font-size:1.25rem;font-weight:bold;cursor:pointer}
+.pill{display:inline-block;border:1px solid var(--line);color:var(--gold2);border-radius:30px;padding:3px 12px;font-size:.8rem}
+.big-number{font:700 3.6rem Amiri;color:var(--gold2);text-align:center;margin:6px}
+.prayer-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:16px}
+.prayer-time{background:#061f19;border:1px solid var(--line);border-radius:13px;text-align:center;padding:12px 4px}
+.prayer-time b{display:block;color:var(--gold2)}.prayer-time span{color:var(--muted);font-size:.9rem}
+.dua{font:1.5rem/2.2 Amiri;color:#f5edda;text-align:center}
+.quote{font:1.55rem/2 Amiri;color:var(--gold2)}
+.notice{color:var(--muted);font-size:.85rem}
+footer{text-align:center;border-top:1px solid var(--line);padding:28px 15px;color:var(--muted)}
+footer strong{color:var(--gold2)}
+.overlay{position:fixed;inset:0;z-index:30;background:rgba(2,14,11,.96);display:grid;place-items:center;padding:20px;transition:opacity .7s}
+.overlay.hide{opacity:0;pointer-events:none}
+.intro-box{max-width:620px;text-align:center;padding:35px 25px;border:1px solid var(--gold);border-radius:24px;background:radial-gradient(circle at top,#174c3c,#071f1a 70%);box-shadow:var(--shadow)}
+.intro-box .orn{font:2.4rem Amiri;color:var(--gold)}
+.intro-box h2{font:700 2.4rem Amiri;color:var(--gold2);margin:0}
+.intro-box p{color:#eee7d6}
+@media(max-width:700px){.nav{align-items:flex-start;flex-direction:column}nav{width:100%;overflow:auto;flex-wrap:nowrap}nav button{white-space:nowrap}.grid{grid-template-columns:1fr}.stats{gap:7px}.stat{padding:11px 4px}.stat b{font-size:1.15rem}.prayer-grid{grid-template-columns:repeat(2,1fr)}.hero{padding:48px 14px 35px}}
+</style>
+</head>
+<body>
+<div class="overlay" id="intro">
+ <div class="intro-box">
+  <div class="orn">۞ ۞ ۞</div>
+  <h2>أثرٌ باقٍ</h2>
+  <p>صدقة جارية على روح جدّي <strong>علي محمد حسين</strong>، وجدّي <strong>أبو الفتوح محمد رضا</strong>.</p>
+  <p>اللهم اغفر لهما وارحمهما، واجعل هذا العمل نورًا لهما، وصدقةً جاريةً لا ينقطع أجرها.</p>
+  <button class="btn" onclick="closeIntro()">ادخل إلى الموقع</button>
+ </div>
+</div>
+<header><div class="nav">
+ <div class="brand"><span class="brand-mark">أ</span><span>أثرٌ باقٍ</span></div>
+ <nav aria-label="التنقل الرئيسي">
+  <button class="active" data-tab="home">الرئيسية</button><button data-tab="quran">القرآن الكريم</button><button data-tab="adhkar">الأذكار</button><button data-tab="prayer">الصلاة</button><button data-tab="tasbeeh">المسبحة</button><button data-tab="dua">الدعاء</button>
+ </nav>
+</div></header>
+<main>
+<section id="home" class="section active">
+ <div class="hero">
+  <div class="eyebrow">مِنْ فَضْلِ اللَّهِ وَرَحْمَتِهِ</div>
+  <h1>أثرٌ باقٍ</h1>
+  <p class="tagline">اجعل لك أثرًا من الخير لا ينقطع، ونورًا يبقى بعد الرحيل.</p>
+  <div class="hero-actions"><button class="btn" onclick="showTab('quran')">ابدأ بالقرآن الكريم</button><button class="btn ghost" onclick="showTab('dua')">ادعُ لهما</button></div>
+  <div class="dedication">إهداء إلى روحَي<br><strong>علي محمد حسين</strong> و <strong>أبو الفتوح محمد رضا</strong></div>
+ </div>
+ <div class="stats">
+  <div class="stat"><b>القرآن الكريم</b><span>تلاوة وتدبّر</span></div><div class="stat"><b>ذكرٌ لله</b><span>طمأنينة للقلب</span></div><div class="stat"><b>دعاءٌ لا ينقطع</b><span>نسأل الله القبول</span></div>
+ </div>
+ <div class="grid">
+  <div class="card"><h2>🌙 وردك اليومي</h2><p>ابدأ يومك بذكر الله، واجعل لك نصيبًا من القرآن والدعاء.</p><button class="btn ghost" onclick="showTab('adhkar')">افتح الأذكار</button></div>
+  <div class="card"><h2>🤲 دعوة من القلب</h2><p>اللهم ارحم موتانا وموتى المسلمين، واجعل قبورهم نورًا وراحة.</p><button class="btn ghost" onclick="showTab('dua')">اقرأ الدعاء</button></div>
+ </div>
+ <div class="card" style="margin-top:16px"><h2>عن هذا العمل</h2><p>هذا الموقع مساحة للقرآن والذكر والدعاء، أُهدي ثواب ما يُرجى من خيره إلى روحَي <strong style="color:var(--gold2)">علي محمد حسين</strong> أولًا، ثم <strong style="color:var(--gold2)">أبو الفتوح محمد رضا</strong>. نسأل الله أن يتقبّل، وأن يجعل هذا العمل خالصًا لوجهه الكريم.</p><p class="notice">تذكير: الأجر والقبول بيد الله وحده، ونسأله سبحانه أن ينفع بهذا العمل.</p></div>
+</section>
+
+<section id="quran" class="section">
+ <h2 class="section-title">القرآن الكريم</h2><p class="section-sub">اختر سورة واستمع إلى تلاوتها واقرأ آياتها.</p>
+ <div class="card">
+  <div class="row"><select class="field" id="surahSelect"><option>جارٍ تحميل السور...</option></select><button class="btn" id="loadSurah">عرض السورة</button></div>
+  <div id="surahMeta" class="notice" style="margin-top:12px"></div><div id="quranText" class="quran-text">يتم تحميل قائمة السور...</div>
+  <audio id="quranAudio" class="audio" controls preload="none"></audio>
+  <p class="notice">قد يحتاج تحميل السورة والصوت إلى اتصال بالإنترنت.</p>
+ </div>
+</section>
+
+<section id="adhkar" class="section">
+ <h2 class="section-title">الأذكار</h2><p class="section-sub">اختر وردًا، وكرّر الذكر على مهل مع استحضار القلب.</p>
+ <div class="row"><button class="btn" onclick="renderAdhkar('morning')">أذكار الصباح</button><button class="btn ghost" onclick="renderAdhkar('evening')">أذكار المساء</button><button class="btn ghost" onclick="renderAdhkar('general')">أذكار متنوعة</button></div>
+ <div id="adhkarList"></div>
+</section>
+
+<section id="prayer" class="section">
+ <h2 class="section-title">مواقيت الصلاة</h2><p class="section-sub">اعرض المواقيت حسب المدينة التي تختارها.</p>
+ <div class="card"><div class="row"><input id="cityInput" class="field" value="Giza" placeholder="اسم المدينة بالإنجليزية أو العربية"><button class="btn" onclick="loadPrayer()">عرض المواقيت</button></div><div id="prayerDate" class="notice" style="margin-top:12px"></div><div id="prayerGrid" class="prayer-grid"><p class="notice">اكتب اسم مدينتك واضغط عرض المواقيت.</p></div><p class="notice">المواقيت تقديرية بحسب طريقة الحساب المختارة، ويُرجى مراجعة التقويم المحلي أو المسجد القريب.</p></div>
+</section>
+
+<section id="tasbeeh" class="section">
+ <h2 class="section-title">المسبحة الإلكترونية</h2><p class="section-sub">اختر الذكر، واضغط على الزر مع كل تسبيحة.</p>
+ <div class="card" style="text-align:center"><select id="zikrSelect" class="field"><option>سبحان الله</option><option>الحمد لله</option><option>الله أكبر</option><option>أستغفر الله</option><option>لا إله إلا الله</option><option>اللهم صلِّ على محمد</option></select><div class="big-number" id="tasbeehCount">٠</div><div class="count-btn"><button onclick="tapTasbeeh()" aria-label="سبّح">＋</button><button onclick="resetTasbeeh()" aria-label="إعادة العداد" style="background:transparent;color:var(--gold2)">↺</button></div><p id="tasbeehMessage" class="notice">بارك الله في ذكرك.</p></div>
+</section>
+
+<section id="dua" class="section">
+ <h2 class="section-title">الدعاء للجدّين</h2><p class="section-sub">نسأل الله لهما الرحمة والمغفرة ورفعة الدرجات.</p>
+ <div class="card">
+  <p class="dua">اللهم اغفر لـ <strong>علي محمد حسين</strong> و<strong>أبو الفتوح محمد رضا</strong>، وارحمهما رحمةً واسعة، وعافهما واعفُ عنهما، وأكرم نزلهما، ووسّع مدخلهما، واجعل قبريهما روضةً من رياض الجنة.</p>
+  <hr style="border:0;border-top:1px solid var(--line);margin:20px 0">
+  <p class="dua">اللهم آنس وحشتهما، ونوّر قبريهما، وثقّل بالحسنات ميزانهما، واجزهما عنّا خير الجزاء، واجمعنا بهما في جنات النعيم.</p>
+  <hr style="border:0;border-top:1px solid var(--line);margin:20px 0">
+  <p class="dua">اللهم اجعل ما قُرئ من قرآن، وما رُدّد من ذكر، وما رُفع من دعاء، سببًا للرحمة والمغفرة، وتقبّل منّا يا أرحم الراحمين.</p>
+ </div>
+ <div class="card"><h2>حديث نبوي</h2><p class="quote">«إذا مات الإنسان انقطع عنه عمله إلا من ثلاثة: إلا من صدقة جارية، أو علم ينتفع به، أو ولد صالح يدعو له»</p><p class="notice">رواه مسلم.</p></div>
+</section>
+</main>
+<footer><strong>أثرٌ باقٍ</strong><br>اللهم اجعل هذا العمل خالصًا لوجهك الكريم، وانفع به من زاره وشارك فيه.</footer>
+<script>
+const tabs=[...document.querySelectorAll('nav button')];
+function showTab(id){document.querySelectorAll('.section').forEach(s=>s.classList.toggle('active',s.id===id));tabs.forEach(b=>b.classList.toggle('active',b.dataset.tab===id));window.scrollTo({top:0,behavior:'smooth'});}
+tabs.forEach(b=>b.addEventListener('click',()=>showTab(b.dataset.tab)));
+function closeIntro(){document.getElementById('intro').classList.add('hide')}
+const arabicDigits=n=>String(n).replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
+const adhkar={
+ morning:[
+ ['أصبحنا وأصبح الملك لله، والحمد لله، لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير.','مرة واحدة'],
+ ['اللهم بك أصبحنا، وبك أمسينا، وبك نحيا، وبك نموت، وإليك النشور.','مرة واحدة'],
+ ['رضيت بالله ربًا، وبالإسلام دينًا، وبمحمد ﷺ نبيًا.','ثلاث مرات'],
+ ['سبحان الله وبحمده.','مائة مرة (ورد مشهور)']
+ ],
+ evening:[
+ ['أمسينا وأمسى الملك لله، والحمد لله، لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير.','مرة واحدة'],
+ ['اللهم بك أمسينا، وبك أصبحنا، وبك نحيا، وبك نموت، وإليك المصير.','مرة واحدة'],
+ ['رضيت بالله ربًا، وبالإسلام دينًا، وبمحمد ﷺ نبيًا.','ثلاث مرات'],
+ ['أستغفر الله وأتوب إليه.','كرّرها قدر استطاعتك']
+ ],
+ general:[
+ ['سبحان الله وبحمده، سبحان الله العظيم.','ذكر'],
+ ['لا حول ولا قوة إلا بالله.','ذكر'],
+ ['لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير.','ذكر'],
+ ['اللهم صلِّ وسلم على نبينا محمد.','ذكر']
+ ]};
+function renderAdhkar(type='morning'){
+ const host=document.getElementById('adhkarList');host.innerHTML='';
+ adhkar[type].forEach((item,i)=>{const el=document.createElement('div');el.className='adhkar-item';const p=document.createElement('div');p.className='arabic';p.textContent=item[0];const small=document.createElement('small');small.textContent=item[1];const count=document.createElement('div');count.className='count-btn';const num=document.createElement('span');num.className='pill';num.textContent='٠';const btn=document.createElement('button');btn.textContent='＋';btn.onclick=()=>num.textContent=arabicDigits(Number(String(num.textContent).replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d)))+1);count.append(btn,num);el.append(p,small,count);host.append(el)});
+}
+renderAdhkar();
+let tasbeeh=0;function tapTasbeeh(){tasbeeh++;document.getElementById('tasbeehCount').textContent=arabicDigits(tasbeeh);if(tasbeeh%33===0)document.getElementById('tasbeehMessage').textContent='أحسنت، تقبّل الله ذكرك.'}
+function resetTasbeeh(){tasbeeh=0;document.getElementById('tasbeehCount').textContent='٠';document.getElementById('tasbeehMessage').textContent='تم تصفير العدّاد.'}
+let surahs=[];
+async function initQuran(){
+ const sel=document.getElementById('surahSelect'),text=document.getElementById('quranText');
+ try{const r=await fetch('https://api.alquran.cloud/v1/surah');const j=await r.json();if(j.code!==200)throw Error('api');surahs=j.data;sel.innerHTML='';surahs.forEach(s=>{const o=document.createElement('option');o.value=s.number;o.textContent=arabicDigits(s.number)+' - '+s.name;sel.append(o)});await loadSurah(1)}
+ catch(e){text.textContent='تعذّر تحميل قائمة السور الآن. تأكد من اتصال الإنترنت وحاول مرة أخرى.';sel.innerHTML='<option>تعذّر التحميل</option>'}
+}
+async function loadSurah(n){
+ const text=document.getElementById('quranText'),meta=document.getElementById('surahMeta'),audio=document.getElementById('quranAudio');
+ text.textContent='جارٍ تحميل السورة...';audio.removeAttribute('src');
+ try{const r=await fetch('https://api.alquran.cloud/v1/surah/'+n);const j=await r.json();if(j.code!==200)throw Error('api');meta.textContent=j.data.name+' • '+(j.data.revelationType==='Meccan'?'مكية':'مدنية')+' • '+arabicDigits(j.data.numberOfAyahs)+' آية';text.textContent=j.data.ayahs.map(a=>a.text+' ۝'+arabicDigits(a.numberInSurah)).join(' ');audio.src='https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/'+n+'.mp3';}
+ catch(e){text.textContent='تعذّر تحميل السورة. حاول مرة أخرى.'}
+}
+document.getElementById('loadSurah').addEventListener('click',()=>loadSurah(Number(document.getElementById('surahSelect').value)));
+initQuran();
+async function loadPrayer(){
+ const city=document.getElementById('cityInput').value.trim();if(!city)return;
+ const grid=document.getElementById('prayerGrid');grid.innerHTML='<p class="notice">جارٍ تحميل المواقيت...</p>';
+ try{const r=await fetch('https://api.aladhan.com/v1/timingsByCity?city='+encodeURIComponent(city)+'&country=Egypt&method=5');const j=await r.json();if(j.code!==200)throw Error('api');const t=j.data.timings;document.getElementById('prayerDate').textContent='التاريخ الهجري: '+j.data.date.hijri.date;const names=[['الفجر','Fajr'],['الظهر','Dhuhr'],['العصر','Asr'],['المغرب','Maghrib'],['العشاء','Isha']];grid.innerHTML=names.map(([ar,en])=>'<div class="prayer-time"><b>'+ar+'</b><span>'+t[en]+'</span></div>').join('');}
+ catch(e){grid.innerHTML='<p class="notice">تعذّر تحميل المواقيت. جرّب كتابة اسم المدينة بالإنجليزية.</p>'}
+}
+</script>
+</body></html>
